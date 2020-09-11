@@ -26,10 +26,10 @@ body {
 }
 .flex-container {
   display: flex;
-  height: 100vh;
-  justify-content: center;
+  min-height: 100vh;
   align-items: center;
   flex-direction: column;
+  padding-top: 100px;
 }
 .health-meter-container {
   display: flex;
@@ -51,7 +51,8 @@ body {
   font-weight: 700;
   padding: 10px;
 }
-.action-buttons {
+.action-buttons,
+.action-logs {
   margin: 50px 0;
   border: 2px solid #aaaaaa;
   box-shadow: 0 0 10px #aaaaaa;
@@ -74,6 +75,11 @@ button:focus {
   border: 0;
 }
 
+.action-logs li {
+  list-style: none;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 10px 0;
+}
 /* Text Alignment
 --------------------------------*/
 .text-center {
