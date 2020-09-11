@@ -29,7 +29,7 @@
             <button v-on:click="attack()">Attack</button> <button v-on:click="starNewtGame()">Start New Game</button>
           </div><!--running-game-buttons -->
         </div>
-        <div class="action-logs">
+        <div class="action-logs" v-if="logs.length > 0">
           <h3>Attack Logs</h3>
           <li v-for="log in logs">{{ log }}</li>
         </div><!--action-logs-->
