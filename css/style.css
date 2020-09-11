@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #efeeeb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 0;
+  color: #111;
+  width: 100%;
+  max-width: 1020px;
+}
+/* Layout
+------------------------------------- */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+.flex-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.health-meter-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.health-meter {
+  flex: 40%;
+  margin: 10px;
+}
+.meter {
+  min-height: 30px;
+  width: 100%;
+  background-color: gray;
+}
+.health-count {
+  background-color: #1dd1a1;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px;
+}
+.action-buttons {
+  margin: 50px 0;
+  border: 2px solid #aaaaaa;
+  box-shadow: 0 0 10px #aaaaaa;
+  padding: 30px;
+  width: 100%;
+  text-align-last: center;
+}
+button {
+  padding: 10px 20px;
+  color: #fff;
+  background: tomato;
+  border: 0;
+  cursor: pointer;
+}
+button:hover {
+  background: #222;
+}
+button:focus {
+  outline: none;
+  border: 0;
+}
+
+/* Text Alignment
+--------------------------------*/
+.text-center {
+  text-align: center;
+}
