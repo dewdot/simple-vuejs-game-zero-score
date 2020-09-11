@@ -6,79 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>VueJS Simple Game - Who Reaches Zero First</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-  body {
-    margin: 0 auto;
-  }
-  .content {
-    margin: 0;
-  }
-  .flex-container {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .health-meter-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-  }
-  .health-meter {
-    flex: 40%;
-    margin: 10px;
-  }
-  .meter {
-    min-height: 30px;
-    width: 100%;
-    background-color: gray;
-  }
-  .health-count {
-    background-color: #1dd1a1;
-    color: #ffffff;
-    font-weight: 700;
-    padding: 10px;
-  }
-  .action-buttons {
-    margin: 50px 0;
-    border: 2px solid #aaaaaa;
-    box-shadow: 0 0 10px #aaaaaa;
-    padding: 30px;
-    width: 100%;
-    text-align-last: center;
-  }
-  </style>
 </head>
 <body>
   <div class="container">
-    <div class="content">
-      <div id="vue-element">
-        <div class="flex-container">
-          <div class="health-meter-container">
-            <div class="health-meter health-meter-you">
-              <h3>YOU</h3>
-              <div class="meter meter-you"><div class="health-count health-count-you" v-bind:style="{width: healthYou + '%'}">{{ healthYou }}</div></div>
-            </div><!--health-meter-you-->
-            <div class="health-meter health-meter-moster">
-              <h3>COMPUTER</h3>
-              <div class="meter meter-monster"><div class="health-count health-count-monster" v-bind:style="{width: healthCom + '%'}">{{ healthCom }}</div></div>
-            </div><!--health-meter-moster-->
-          </div><!--health-meter-->
-          <div class="action-buttons">
-            <div class="start-game-buttons" v-if="startGame">
-              <button v-on:click="startGame = !startGame">Start Game</button>
-            </div><!--start-game-buttons-->
-            <div class="running-game-buttons" v-else>
-              <button v-on:click="attack()">Attack</button> <button v-on:click="starNewtGame()">Start New Game</button>
-            </div><!--running-game-buttons -->
-          </div>
-        </div><!--flex-container-->
-      </div>
+    <div id="vue-element">
+      <div class="flex-container">
+        <div class="health-meter-container">
+          <div class="health-meter health-meter-you">
+            <h3>YOU</h3>
+            <div class="meter meter-you"><div class="health-count health-count-you" v-bind:style="{width: healthYou + '%'}">{{ healthYou }}</div></div>
+          </div><!--health-meter-you-->
+          <div class="health-meter health-meter-moster">
+            <h3>COMPUTER</h3>
+            <div class="meter meter-monster"><div class="health-count health-count-monster" v-bind:style="{width: healthCom + '%'}">{{ healthCom }}</div></div>
+          </div><!--health-meter-moster-->
+        </div><!--health-meter-->
+        <div class="action-buttons">
+          <div class="start-game-buttons" v-if="startGame">
+            <button v-on:click="startGame = !startGame">Start Game</button>
+          </div><!--start-game-buttons-->
+          <div class="running-game-buttons" v-else>
+            <button v-on:click="attack()">Attack</button> <button v-on:click="starNewtGame()">Start New Game</button>
+          </div><!--running-game-buttons -->
+        </div>
+      </div><!--flex-container-->
     </div>
   </div>
-
-
 <script src="js/vue-min.js"></script>
 <script>
 var vueApp = new Vue({
